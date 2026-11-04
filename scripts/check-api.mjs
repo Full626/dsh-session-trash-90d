@@ -15,7 +15,7 @@ const arg = function (name, fallback) {
   return i >= 0 && args[i + 1] !== undefined ? args[i + 1] : fallback
 }
 const url = arg('url', process.env.DSH_WEB_URL || 'http://127.0.0.1:19387')
-const API = url.replace(/\/+$/, '') + '/api/dsh-session-admin'
+const API = url.replace(/\/+$/, '') + '/api/dsh-session-trash-90d'
 
 const call = async function (action, body) {
   const init = { headers: { accept: 'application/json' } }

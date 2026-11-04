@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Install or uninstall dsh-session-admin for one dsh profile.
+    Install or uninstall dsh-session-trash-90d for one dsh profile.
 .EXAMPLE
     .\install.ps1 -Profile desktop
 .EXAMPLE

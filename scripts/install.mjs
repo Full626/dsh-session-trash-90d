@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Install (or uninstall) dsh-session-admin for one dsh profile.
+ * Install (or uninstall) dsh-session-trash-90d for one dsh profile.
  *
  * Like every DSH plugin this package is a BUNDLE: it ships cordis.patch.yml,
  * which the profile loader applies once the package name is selected in the

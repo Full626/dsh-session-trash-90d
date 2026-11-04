@@ -1,4 +1,4 @@
-# dsh-session-admin
+# dsh-session-trash-90d
 
 DSH Web GUI 的**会话管理插件**：列出所有已存储会话，归档 / 取消归档，以及**真正删除**。
 
@@ -60,7 +60,7 @@ $DSH_HOME/sessions-trash/<删除时间戳>-<会话 id>/
 应用自带的 `cordis.patch.yml`。
 
 ```powershell
-cd dsh-session-admin
+cd dsh-session-trash-90d
 .\install.ps1 -Profile desktop          # 默认就是 desktop
 .\install.ps1 -Profile desktop -DryRun  # 只看将要做的改动
 .\install.ps1 -Profile desktop -Uninstall
@@ -69,13 +69,13 @@ cd dsh-session-admin
 **从 GitHub 安装** —— 走 profile 自己的插件管理器（设置里的「插件」页），填仓库地址：
 
 ```
-https://github.com/Full626/dsh-session-admin
+https://github.com/Full626/dsh-session-trash-90d
 ```
 
 或命令行：
 
 ```powershell
-dsh plugin --profile desktop add 'github:Full626/dsh-session-admin'
+dsh plugin --profile desktop add 'github:Full626/dsh-session-trash-90d'
 ```
 
 装完**重启应用**（新组合层要下次组合才生效），然后 **设置 → 会话管理**。

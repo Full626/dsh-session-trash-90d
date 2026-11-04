@@ -1,7 +1,6 @@
 {
-  "name": "dsh-session-admin",
-  "version": "0.1.0",
-  "private": true,
+  "name": "dsh-session-trash-90d",
+  "version": "0.2.0",
   "description": "Session administration for the DSH Web GUI: list, archive, unarchive, and move stored sessions to a 90-day trash (restore or purge). Deletion detaches the live session so the UI updates at once, with a tombstone replay for the cases the host will not release.",
   "type": "module",
   "main": "lib/index.js",
@@ -33,7 +32,8 @@
     }
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=22",
+    "dsh": ">=0.2.0 <0.3.0"
   },
   "scripts": {
     "test": "node scripts/test-host.mjs",
@@ -42,9 +42,9 @@
   },
   "author": "Full626",
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/Full626/dsh-session-admin.git" },
-  "homepage": "https://github.com/Full626/dsh-session-admin#readme",
-  "bugs": { "url": "https://github.com/Full626/dsh-session-admin/issues" },
+  "repository": { "type": "git", "url": "git+https://github.com/Full626/dsh-session-trash-90d.git" },
+  "homepage": "https://github.com/Full626/dsh-session-trash-90d#readme",
+  "bugs": { "url": "https://github.com/Full626/dsh-session-trash-90d/issues" },
   "keywords": [
     "dsh",
     "dsh-plugin",

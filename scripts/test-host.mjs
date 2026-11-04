@@ -31,7 +31,7 @@ function check(label, ok, detail) {
   console.log('  FAIL ' + label + (detail === undefined ? '' : ' -- ' + detail))
 }
 
-const root = join(tmpdir(), 'dsh-session-admin-test-' + Date.now())
+const root = join(tmpdir(), 'dsh-session-trash-90d-test-' + Date.now())
 const sessionsRoot = join(root, 'sessions')
 const cacheRoot = join(root, 'storages', 'session_projcache', 'sessions')
 const trashRoot = join(root, 'sessions-trash')
@@ -137,7 +137,7 @@ const fakeCtx = {
 }
 const call = async (method, action, body) => {
   const res = makeRes()
-  await routes[0].handler(makeReq(method, '/api/dsh-session-admin/' + action, body), res)
+  await routes[0].handler(makeReq(method, '/api/dsh-session-trash-90d/' + action, body), res)
   return res
 }
 const listDir = async (dir) => { try { return await readdir(dir) } catch { return [] } }
@@ -146,7 +146,7 @@ try {
   process.env.DSH_HOME = root
   const plugin = await import(ENTRY + '?t=' + Date.now())
   check('host half exports apply', typeof plugin.apply === 'function')
-  check('host half declares name', plugin.name === 'dsh-session-admin', String(plugin.name))
+  check('host half declares name', plugin.name === 'dsh-session-trash-90d', String(plugin.name))
   check('host half requires webServer only', JSON.stringify(plugin.inject) === '["webServer"]', JSON.stringify(plugin.inject))
 
   const keep = 'session-aaaa1111-0000-0000-0000-000000000001'
@@ -160,7 +160,7 @@ try {
   const dirBlank = await seed(blank, '', { user: false })
 
   plugin.apply(fakeCtx)
-  check('route registered under the expected prefix', routes.length === 1 && routes[0].path === '/api/dsh-session-admin')
+  check('route registered under the expected prefix', routes.length === 1 && routes[0].path === '/api/dsh-session-trash-90d')
   await new Promise((r) => setTimeout(r, 30))
 
   // ---- listing ---------------------------------------------------------------
